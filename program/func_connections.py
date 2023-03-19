@@ -8,7 +8,8 @@ from constants import (
     DYDX_API_PASSPHRASE,
     STARK_PRIVATE_KEY,
     HTTP_PROVIDER,
-    ETH_PRIVATE_KEY
+    ETH_PRIVATE_KEY,
+    ABORT_ALL_POSITIONS
 )
 
 def connect_dydx():
