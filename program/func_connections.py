@@ -9,7 +9,8 @@ from constants import (
     STARK_PRIVATE_KEY,
     HTTP_PROVIDER,
     ETH_PRIVATE_KEY,
-    ABORT_ALL_POSITIONS
+    ABORT_ALL_POSITIONS,
+    FIND_COINTEGRATED
 )
 
 def connect_dydx():

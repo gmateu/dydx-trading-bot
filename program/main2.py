@@ -1,5 +1,6 @@
 from func_connections import *
 from func_private import *
+from func_public import *
 
 
 if __name__ == '__main__':
@@ -21,4 +22,14 @@ if __name__ == '__main__':
             close_orders=abort_all_positions(client)
         except Exception as e:
             print("error clossing positions",e)
+            exit(1)
+        
+    #find cointegrated pairs
+    if FIND_COINTEGRATED:
+        #CONSTRUCT MARKET PRICES
+        df_market_prices = construct_market_prices(client)
+        try:
+            print("fetching prices ... 3 mins")
+        except Exception as e:
+            print("error fetching prices",e)
             exit(1)
