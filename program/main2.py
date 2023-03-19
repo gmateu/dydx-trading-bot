@@ -27,9 +27,10 @@ if __name__ == '__main__':
     #find cointegrated pairs
     if FIND_COINTEGRATED:
         #CONSTRUCT MARKET PRICES
-        df_market_prices = construct_market_prices(client)
         try:
             print("fetching prices ... 3 mins")
+            df_market_prices = construct_market_prices(client)
+            # close_prices = get_candles_historical(client,"SOL-USD")
         except Exception as e:
             print("error fetching prices",e)
             exit(1)
