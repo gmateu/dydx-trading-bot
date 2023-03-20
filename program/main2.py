@@ -2,6 +2,7 @@ from func_connections import *
 from func_private import *
 from func_public import *
 from func_cointegration import *
+from func_entry_pairs import open_positions
 
 
 if __name__ == '__main__':
@@ -55,7 +56,7 @@ if __name__ == '__main__':
     #place trades for opening positions
     if PLACE_TRADES:
         try:
-
+            open_positions(client)
         except Exception as e:
             print("error trading ", e)
             exit(1)
